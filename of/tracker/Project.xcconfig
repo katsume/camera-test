@@ -1,0 +1,45 @@
+//THE PATH TO THE ROOT OF OUR OF PATH RELATIVE TO THIS PROJECT.
+//THIS NEEDS TO BE DEFINED BEFORE CoreOF.xcconfig IS INCLUDED
+OF_PATH = ../../..
+
+//THIS HAS ALL THE HEADER AND LIBS FOR OF CORE
+#include "../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig"
+
+OTHER_LDFLAGS_OPENCV = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/lib/osx/opencv.a"
+
+OTHER_LDFLAGS = $(OF_CORE_LIBS) $(OTHER_LDFLAGS_OPENCV)
+
+HEADER_OSC_1 = "$(OF_PATH)/addons/ofxOsc/libs"
+HEADER_OSC_2 = "$(OF_PATH)/addons/ofxOsc/libs/oscpack"
+HEADER_OSC_3 = "$(OF_PATH)/addons/ofxOsc/libs/oscpack/src"
+HEADER_OSC_4 = "$(OF_PATH)/addons/ofxOsc/libs/oscpack/src/ip"
+HEADER_OSC_5 = "$(OF_PATH)/addons/ofxOsc/libs/oscpack/src/ip/posix"
+HEADER_OSC_6 = "$(OF_PATH)/addons/ofxOsc/libs/oscpack/src/ip/win32"
+HEADER_OSC_7 = "$(OF_PATH)/addons/ofxOsc/libs/oscpack/src/osc"
+HEADER_OSC_8 = "$(OF_PATH)/addons/ofxOsc/src"
+HEADER_OSC = $(HEADER_OSC_1) $(HEADER_OSC_2) $(HEADER_OSC_3) $(HEADER_OSC_4) $(HEADER_OSC_5) $(HEADER_OSC_6) $(HEADER_OSC_7) $(HEADER_OSC_8)
+
+HEADER_OPENCV_1 = "$(OF_PATH)/addons/ofxOpenCv/libs"
+HEADER_OPENCV_2 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv"
+HEADER_OPENCV_3 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include"
+HEADER_OPENCV_4 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv"
+HEADER_OPENCV_5 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2"
+HEADER_OPENCV_6 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/calib3d"
+HEADER_OPENCV_7 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/contrib"
+HEADER_OPENCV_8 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/core"
+HEADER_OPENCV_9 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/features2d"
+HEADER_OPENCV_10 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/flann"
+HEADER_OPENCV_11 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/gpu"
+HEADER_OPENCV_12 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/highgui"
+HEADER_OPENCV_13 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc"
+HEADER_OPENCV_14 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/legacy"
+HEADER_OPENCV_15 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/ml"
+HEADER_OPENCV_16 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/objdetect"
+HEADER_OPENCV_17 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/ts"
+HEADER_OPENCV_18 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/include/opencv2/video"
+HEADER_OPENCV_19 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/lib"
+HEADER_OPENCV_20 = "$(OF_PATH)/addons/ofxOpenCv/libs/opencv/lib/osx"
+HEADER_OPENCV_21 = "$(OF_PATH)/addons/ofxOpenCv/src"
+HEADER_OPENCV = $(HEADER_OPENCV_1) $(HEADER_OPENCV_2) $(HEADER_OPENCV_3) $(HEADER_OPENCV_4) $(HEADER_OPENCV_5) $(HEADER_OPENCV_6) $(HEADER_OPENCV_7) $(HEADER_OPENCV_8) $(HEADER_OPENCV_9) $(HEADER_OPENCV_10) $(HEADER_OPENCV_11) $(HEADER_OPENCV_12) $(HEADER_OPENCV_13) $(HEADER_OPENCV_14) $(HEADER_OPENCV_15) $(HEADER_OPENCV_16) $(HEADER_OPENCV_17) $(HEADER_OPENCV_18) $(HEADER_OPENCV_19) $(HEADER_OPENCV_20) $(HEADER_OPENCV_21)
+
+HEADER_SEARCH_PATHS = $(OF_CORE_HEADERS) $(HEADER_OSC) $(HEADER_OPENCV)
